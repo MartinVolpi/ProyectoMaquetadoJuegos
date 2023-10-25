@@ -41,3 +41,24 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Suelo
+    uniqueID: 2305391061
+    locked: 0
+  - name: Arboles/Plantas
+    uniqueID: 3784784893
+    locked: 0
+  - name: Objetos
+    uniqueID: 408575127
+    locked: 0
+  - name: Casas
+    uniqueID: 951992801
+    locked: 0
+  - name: Player
+    uniqueID: 1016385329
+    locked: 0
+  - name: Arbustos
+    uniqueID: 3520954021
+    locked: 0
+  - name: GUI
+    uniqueID: 4041921273
+    locked: 0
