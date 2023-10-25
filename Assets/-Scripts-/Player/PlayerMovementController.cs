@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class PlayerMovementController : MonoBehaviour
@@ -45,12 +46,19 @@ public class PlayerMovementController : MonoBehaviour
         {
             ToogleRunMode();
         }
+        // Check if player is on the ground
+        CheckPlayerGrounded();
 
         // Player's movement
         HandleMovement();
 
         // Player's Jump
         HandleJump();
+    }
+
+    private void CheckPlayerGrounded()
+    {
+        isGrounded = Physics2D.OverlapCircle(groundPoint.position, minDistance, groundLayer);
     }
 
     // Activates or Deactivates the running mode
@@ -65,8 +73,6 @@ public class PlayerMovementController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            isGrounded = Physics2D.OverlapCircle(groundPoint.position, minDistance, groundLayer);
-
             if (!isGrounded) return;
 
             rb2D.AddForce(new Vector2(xSpeed * dir, ySpeed));
